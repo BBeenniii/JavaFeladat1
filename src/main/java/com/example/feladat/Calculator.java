@@ -26,7 +26,6 @@ public class Calculator extends Application {
         num2Field.setPromptText("Masodik szam");
         GridPane.setConstraints(num2Field, 1, 0);
 
-        // Buttons
         Button addButton = new Button("+");
         GridPane.setConstraints(addButton, 0, 1);
 
@@ -42,14 +41,11 @@ public class Calculator extends Application {
         Button modulusButton = new Button("%");
         GridPane.setConstraints(modulusButton, 0, 3);
 
-        // Result label
         Label resultLabel = new Label("Eredmeny: ");
         GridPane.setConstraints(resultLabel, 0, 4, 2, 1);
 
-        // Add elements to the grid
         grid.getChildren().addAll(num1Field, num2Field, addButton, subtractButton, multiplyButton, divideButton, modulusButton, resultLabel);
 
-        // Button actions
         addButton.setOnAction(e -> {
             calculate(num1Field, num2Field, resultLabel, "add");
         });
@@ -70,7 +66,6 @@ public class Calculator extends Application {
             calculate(num1Field, num2Field, resultLabel, "modulus");
         });
 
-        // Scene setup
         Scene scene = new Scene(grid, 300, 250);
         primaryStage.setScene(scene);
         primaryStage.show();
