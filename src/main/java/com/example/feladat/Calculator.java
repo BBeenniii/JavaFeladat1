@@ -19,7 +19,7 @@ public class Calculator extends Application {
         grid.setVgap(10);
 
         TextField num1Field = new TextField();
-        num1Field.setPromptText("Elso szam");
+        num1Field.setPromptText("Elso szam ");
         GridPane.setConstraints(num1Field, 0, 0);
 
         TextField num2Field = new TextField();
